@@ -1,0 +1,24 @@
+input {
+  margin: 10px
+}
+
+#log, #reg, #all {
+  margin: 15px;
+  border: solid darkolivegreen 5px;
+  border-radius: 10px;
+  text-align: center;
+  background: darkgrey;
+}
+
+li {
+  list-style-type: none
+}
+
+#hello {
+  border: red 6px solid;
+  border-radius: 12px;
+  background: coral;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}

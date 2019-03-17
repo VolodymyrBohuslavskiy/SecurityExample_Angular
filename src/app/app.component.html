@@ -1,0 +1,83 @@
+<h1>Hello ther !!</h1>
+<div id="reg">
+  <form
+    #regedit="ngForm"
+    (ngSubmit)="boRegedit(regedit)">
+
+    <label>username
+      <input
+        type="text"
+        name="username"
+        ngModel>
+    </label>
+
+    <label>password
+      <input
+        type="text"
+        name="password"
+        ngModel>
+    </label>
+
+    <label>email
+      <input
+        type="text"
+        name="email"
+        ngModel>
+    </label>
+
+    <input
+      type="submit"
+    >
+  </form>
+</div>
+
+<div id="log">
+
+  <form
+    #login="ngForm"
+    (ngSubmit)="boLogin(login)">
+
+    <label>username
+      <input
+        type="text"
+        name="username"
+        ngModel>
+    </label>
+
+    <label>password
+      <input
+        type="text"
+        name="password"
+        ngModel>
+    </label>
+
+    <input
+      type="submit">
+  </form>
+</div>
+
+<div
+  id="all"
+  [ngStyle]="{display: !showUsers ? 'none' : 'block'}">
+  <ul>
+    <li
+      *ngFor=" let s of users">
+      {{s.username + ' ' + s.email}}
+
+      <button
+        (click)="deleteUserofList(s.email)"
+      >Delete
+      </button>
+    </li>
+  </ul>
+</div>
+
+<div
+  id="hello"
+  [ngStyle]="{display: !showHello ? 'none' : 'block'}">
+  Hello {{helloUser.username}}!!!!
+  <button
+    (click)="closeHello()"
+  >Close
+  </button>
+</div>
